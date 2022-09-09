@@ -1,38 +1,209 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body{
+    width: 100%;
+    padding: 10px;
+    overflow-x: hidden;
+    background-color: #EEE3CB;
+    font-family: 'Righteous', cursive;
+    }
+  
+  .entrega{
+    color: rgb(251, 5, 5);
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .detail{
+    width: 300px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  
+  .cart{
+    width: 60px;
+    padding-right: 10px;
   }
-}
+  
+  .logoCarro{
+    width: 400px;
+  }
+  
+  .logoMain{
+    width: 300px;
+  }
+  
+  .logo{
+    width: 150px;
+    text-align: end;
+  }
+  
+  
+  
+  .productos1{
+    font-family: 'Akshar', sans-serif;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .nav1 {
+    font-family: 'Righteous', cursive;
+    font-size: 20px;
+    color: rgb(7, 7, 7);
+    text-decoration: none;
+    padding: 15px;
+  }
+  
+  .nav1:hover{
+    color: #B7C4CF;
+  }
+  
+  .nav2 {
+    font-family: 'Righteous', cursive;
+    font-size: 20px;
+    color: rgb(64, 60, 60);
+    text-decoration: none;
+    text-align: end;
+    
+  }
+  
+  .nav2:hover{
+    color: #B7C4CF;
+  }
+  
+  .dropdownn{
+    font-family: 'Righteous', cursive;
+    font-size: 20px;
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    padding: 10px;
+  }
+  
+  .dropdownn:hover{
+    
+    color: black;
+  }
+  
+  .nav-item{
+    padding: 10px;
+    
+  }
+  
+  .nav-item2{
+    padding: 5px 5px 5px 6px;
+    
+    
+  }
+  /*Inicio Card*/
+  
+  .containerCards{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cards{
+      
+    width: 280px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    float: left ; 
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    background: rgba(255,255,255,0.1);
+    border-radius: 14px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: all 300ms;
+    
+  }
+  
+  .imgCatalog{
+    margin: auto;
+    height: 200px;
+    width: 150px;
+    padding-left: 3rem;
+    border-radius: 15px;
+  }
+  
+  .imgCatalog:hover{
+        transform: scale(1.4) ;
+        border-radius: 15px;
+        
+      }
+  
+  .ProductsName{
+    color: rgb(9, 9, 9);
+  }
+  .agregar{  
+    padding-left: 3rem;
+  
+  }
+  
+  .precio{
+    
+    font-size: 20px;
+    font-weight: 800;
+    color: rgb(79, 5, 5);
+    display: flex;
+    padding: 5px;
+      }
+  
+  /*inicio detail*/
+  
+  .containerDetail{
+    padding: 0rem 5rem 0rem 5rem;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+  }
+  .cardDetail{
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    float: left; 
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    background: rgba(255,255,255,0.1);
+    border-radius: 14px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: all 300ms;
+    
+  }  
+  .flex-item{
+    padding: 3rem;
+    
+  }  
+  
+  .name{
+    font-family: 'Righteous', cursive;
+    font-size: 30px;
+    color: rgb(59, 92, 64);
+    text-decoration: none;
+    padding: 5px;
+  }
+  
+  .name2{
+    font-family: 'Righteous', cursive;
+    font-size: 20px;
+    color: rgb(2, 43, 14);
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .detail{
+    margin: auto;
+    width: 150px;
+    border-radius: 15px;
+  
+  }
+  .detail:hover{
+    transform: scale(1.4) ;
+    
+  }
