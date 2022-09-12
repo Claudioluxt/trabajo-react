@@ -9,7 +9,7 @@ export default function ItemList(props) {
   return(
   
   
-    <div class="containerCards">
+    <div className="containerCards">
       <div>
         
         <div>

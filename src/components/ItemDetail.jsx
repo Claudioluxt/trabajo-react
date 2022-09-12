@@ -13,30 +13,30 @@ const ItemDetail = ({ item }) => {
 
     return (
       <> 
-      <main class="containerDetail">
-        <div class="cardDetail">
+      <main className="containerDetail">
+        <div className="cardDetail">
           
-                <div class="flex-item">
-                  <p class="name2"> Modelo:</p>
-                  <p class="name"> {item.nombre}</p>
-                  <img class="detail" src={item.image} alt="" />
+                <div className="flex-item">
+                  <p className="name2"> Modelo:</p>
+                  <p className="name"> {item.nombre}</p>
+                  <img className="detail" src={item.image} alt="" />
                 </div>
                   
-                <div class="flex-item">
+                <div className="flex-item">
                   <hr />
                   <h2>Marca: {item.brand}</h2>
-                  <p class="desc">Categoría : {item.category}</p>
-                  <p class="desc">Descripción : {item.descripcion}</p>
-                  <p class="desc">ID del Producto = {item.id}</p>
-                  <p class="desc">Stock Disponible = {item.stock}</p>
-                  <p class="precio">Precio = {item.precio} pesos</p> 
+                  <p className="desc">Categoría : {item.category}</p>
+                  <p className="desc">Descripción : {item.descripcion}</p>
+                  <p className="desc">ID del Producto = {item.id}</p>
+                  <p className="desc">Stock Disponible = {item.stock}</p>
+                  <p className="precio">Precio = {item.precio} pesos</p> 
                   <hr />                
                   
                   {
                         itemCount === 0
                       
                         ? <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} />
-                        : <Link to='/cart'><button class="btn btn-outline-primary btn-sm">CheckOut</button></Link>
+                        : <Link to='/cart'><button className="btn btn-outline-primary btn-sm">CheckOut</button></Link>
                     }
                     <hr />
                 </div>

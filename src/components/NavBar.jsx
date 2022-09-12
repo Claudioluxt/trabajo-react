@@ -6,28 +6,28 @@ import CartWidget from "./Cartwidget"
 const NavBar = () => {
   return (
    <>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-      <div class="container-fluid">
+  <nav className="navbar navbar-expand-lg navbar-dark bg-secondary">
+      <div className="container-fluid">
        
-      <a class="navbar-brand" href="../"><img class="logo" src="https://res.cloudinary.com/claudioluxt/image/upload/v1662652524/imagen/logo-original-removebg-preview_twfpze.png" alt="logo"></img></a>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item"> 
-              <Link class="nav1" to="category/2">Tag</Link>
+      <a className="navbar-brand" href="../"><img className="logo" src="https://res.cloudinary.com/claudioluxt/image/upload/v1662652524/imagen/logo-original-removebg-preview_twfpze.png" alt="logo"></img></a>
+          <div className="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul className="navbar-nav mx-auto">
+              <li className="nav-item"> 
+              <Link className="nav1" to="category/2">Tag</Link>
               </li>
-              <li class="nav-item">
-              <Link class="nav1" to="category/1">Book</Link>
+              <li className="nav-item">
+              <Link className="nav1" to="category/1">Book</Link>
               </li>
-              <li class="nav-item">
-              <Link class="nav1" to="category/3">Stickers</Link>
+              <li className="nav-item">
+              <Link className="nav1" to="category/3">Stickers</Link>
               </li>
               
               <CartWidget />4             
-              <li class="nav-item2">
-                <a class="nav2" href="./armados.html"><b>Login</b></a>
+              <li className="nav-item2">
+                <a className="nav2" href="./armados.html"><b>Login</b></a>
               </li>
-              <li class="nav-item2">
-                <a class="nav2" href="./tablas.html"><b>Registrarse</b></a>
+              <li className="nav-item2">
+                <a className="nav2" href="./tablas.html"><b>Registrarse</b></a>
               </li>
             </ul>
             
