@@ -4,6 +4,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #B7C4CF;
+    justify-content: space-between;
   }
 
   .container-fluid{
@@ -39,9 +40,7 @@ ul {
   padding-right: 10px;
 }
 
-.logoCarro{
-  width: 600px;
-}
+
 
 .logoMain{
   width: 600px;
