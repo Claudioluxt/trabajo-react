@@ -29,14 +29,8 @@ const App = () => {
     </Routes>
     </BrowserRouter>
     </CartContextProvider>
-    {/*
-    <p class="entrega">Entrega item detail container</p> 
-    <ItemDetailContainer /> 
-    <p class="entrega">FIN Entrega item detail container</p>
-    
-    
-    */}
-      <Footer/>
+
+    <Footer/>
 
     </>
     )

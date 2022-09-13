@@ -2,6 +2,7 @@ import ItemCount from "./ItemCount";
 import { Link } from 'react-router-dom';
 import { useContext, useState } from "react";
 import { CartContext } from '../context/CartContext';
+import Swal from 'sweetalert2' 
 
 const ItemDetail = ({ item }) => {
 
@@ -9,13 +10,16 @@ const ItemDetail = ({ item }) => {
   const test = useContext(CartContext );
 
     const onAdd = (qty) => {
-      alert ("You have selected " + qty + " items.");
+      Swal.fire ("You have selected " + qty + " items.");
       setItemCount(qty);
       test.addItem (item,qty);
 }
 
     return (
       <> 
+      {
+      item && item.image 
+      ?
       <main className="containerDetail">
         <div className="cardDetail">
           
@@ -49,8 +53,8 @@ const ItemDetail = ({ item }) => {
       
 
 
-
-
+   : <p>Cargando...</p>
+       }
       </>
       )
     
