@@ -3,6 +3,7 @@ import '../styted/NavBar.css'
 import{Link} from "react-router-dom"
 import CartWidget from "./Cartwidget"
 
+
 const NavBar = () => {
   return (
    <>
@@ -22,7 +23,7 @@ const NavBar = () => {
               <Link className="nav1" to="category/3">Stickers</Link>
               </li>
               
-              <CartWidget />4             
+              <CartWidget />             
               <li className="nav-item2">
                 <a className="nav2" href="./armados.html"><b>Login</b></a>
               </li>

@@ -10,7 +10,7 @@ const ItemDetailContainer = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        promesaDetail(500, data.find(item => item.id == id))
+        promesaDetail(1500, data.find(item => item.id == id))
         .then(result => setDato(result))
         .catch(err => console.log(err))
     }, [id]);

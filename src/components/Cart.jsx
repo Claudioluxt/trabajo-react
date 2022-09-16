@@ -27,10 +27,9 @@ const Cart = () => {
                 <span className="precio3">/ Cantidad:</span> {item.quantity} 
                 <span className="precio3">/ Precio x Unidad = </span> {item.precio} pesos </span>                 
                 
-                <buttom className="btn btn-outline-danger btn-sm" 
-                onClick={() => test.removeItem(item.id)}>
+                <button className="btn btn-outline-danger btn-sm" onClick={() => test.removeItem(item.id)}>
                     Quitar producto
-                </buttom>
+                </button>
                 </>
                 
                 )
