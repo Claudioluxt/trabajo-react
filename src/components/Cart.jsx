@@ -9,7 +9,7 @@ const Cart = () => {
     return (
         <>
 
-         <>
+         
          <div className="containerDetail2">      
             
             <button className="btn btn-outline-danger btn-sm" onClick={test.clear}>Quitar todos</button>
@@ -19,40 +19,36 @@ const Cart = () => {
                 <div className="flex-item">
                 {            
                 test.cartList.map (item =>
-                <>
-                <h2>{item.brand}</h2>
-                <img className="cart2" src={item.image} alt="" />
-                <span className="name2">  
-                <span className="precio3">Modelo:</span> {item.nombre} 
-                <span className="precio3">/ Cantidad:</span> {item.quantity} 
-                <span className="precio3">/ Precio x Unidad = </span> {item.precio} pesos </span>                 
+                    <>
+                    <h2>{item.brand}</h2>
+                    <img class="cart2" src={item.image} alt="" />
+                    <span class="name2">  <span class="precio3">Modelo:</span> {item.nombre} <span class="precio3">/ Cantidad:</span> {item.quantity} <span class="precio3">/ Precio x Unidad =</span> {item.precio} pesos  <span class="precio3"> Subtotal: </span> {item.quantity * item.precio}</span>           
+                    
+                    <buttom class="btn btn-outline-primary btn-lg" onClick={() => test.removeItem(item.id)}>Quitar producto</buttom>
+                    <div><hr/></div>
+                    </>
+                    
+                    )
                 
-                <button className="btn btn-outline-danger btn-sm" onClick={() => test.removeItem(item.id)}>
-                    Quitar producto
-                </button>
-                </>
-                
-                )
+                    }</div>
+                    <div class="flex-item">
+    
             
-                }
+            <hr />
+            
             </div>
-                <div className="flex-item">
-                <img className="logoCarro" src="https://res.cloudinary.com/claudioluxt/image/upload/v1662643912/imagen/cartwidget-1_ggi0gd.png" alt="carro"></img>
-                 <h2>Proximamente estaremos funcionando</h2>       
-               </div>
-        </div>
-               
-    
-        </div>
-        
-          
-        </>
-        </>
+            </div>
+                    
+            <div class="flex-item"><h1>Total Compra = {test.calcTotalCompra()} pesos . </h1> </div>
+            <div class="flex-item"><buttom class="btn btn-secondary btn-lg"> Realizar Compra</buttom></div>
+            <div class="flex-item"><button class="btn btn-outline-danger btn-lg" onClick={test.clear}>Quitar todos</button></div>
+            
+            </div>
+            
+            </>
+        )
+    }
 
         
-        
     
-    )
-}
-
 export default Cart;

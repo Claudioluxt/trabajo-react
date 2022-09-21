@@ -1,47 +1,45 @@
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #B7C4CF;
-    justify-content: space-between;
-  }
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #B7C4CF;
+  justify-content: space-between;
+}
 
-  .container-fluid{
-    border-radius: 15px;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: rgb(175, 175, 175);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover:not(.active) {
-    background-color: #967E76;
-    border-radius: 10px;
-  }
-  
-  .active {
-    background-color: #04AA6D;
-  }
-  .logo{
-    width: 50px;
-  }
-  
+.container-fluid{
+  border-radius: 15px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: rgb(8, 7, 7);
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color:#EEE3CB;
+  border-radius: 10px;
+}
+
+
+.logo{
+  width: 40px;
+}
+
 .cart{
-  width: 60px;
-  padding-right: 10px;
+width: 50px;
+padding-right: 10px;
 }
 
 
 
 .logoMain{
-  width: 600px;
+width: 600px;
 }
