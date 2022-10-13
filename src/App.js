@@ -5,8 +5,8 @@ import ItemDetailContainer from "./containers/ItemDetailContainer";
 import Greeting from "./components/Greeting";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cart from "./components/Cart";
-import Footer from './components/Footer';
 import CartContextProvider from './context/CartContext';
+import Footer from './components/Footer';
 
 
 

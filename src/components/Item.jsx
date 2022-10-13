@@ -8,7 +8,7 @@ const Item =({id, brand, nombre, precio, image, stock}) => {
       <div><h3 className="marca">{brand}</h3>
       <h4 className="ProductsName">{nombre}</h4>
 
-      <Link to={`/item/${id}`}><img className="imgCatalog" src={image} alt="" />
+      <Link to={`/item/${id}`}><img className="imgCatalog rounded" src={image} alt="" />
       </Link>
       
       <p className="precio">Precio: {precio}</p> 

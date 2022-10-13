@@ -2,6 +2,10 @@ import React from 'react'
 import '../styted/NavBar.css'
 import{Link} from "react-router-dom"
 import CartWidget from "./Cartwidget"
+import  Navbar from 'react-bootstrap/Navbar'
+import  Container  from 'react-bootstrap/Container'
+import  Nav  from 'react-bootstrap/Nav'
+
 
 
 
@@ -9,37 +13,37 @@ import CartWidget from "./Cartwidget"
 const NavBar = () => {
   return (
     <>
-  <nav className="navbar navbar-expand-lg navbar-dark bg-secondary">
-      <div className="container-fluid">
-       
-      <a className="navbar-brand" href="../"><img className="logo" src="https://res.cloudinary.com/claudioluxt/image/upload/v1662652524/imagen/logo-original-removebg-preview_twfpze.png" alt="logo"></img></a>
-          <div className="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul className="navbar-nav mx-auto">
-              <li className="nav-item"> 
-              <Link className="nav1" to="category/2">Tag</Link>
-              </li>
-              <li className="nav-item">
-              <Link className="nav1" to="category/1">Book</Link>
-              </li>
-              <li className="nav-item">
-              <Link className="nav1" to="category/3">Stickers</Link>
-              </li>
+         <Navbar bg="dark" variant="dark">
+        <Container>
+          <Navbar.Brand href="../">
+            <img
+              alt="logo megumi"
+              src="https://res.cloudinary.com/claudioluxt/image/upload/v1662652524/imagen/logo-original-removebg-preview_twfpze.png"
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+            />{' '}
+           MEGUMI
+          </Navbar.Brand>
+        </Container>
+        <Container className='Boton'>
+          <Nav className="justify-content-center">
+            <form className="form-inline">
+              <button className="btn btn-sn btn-outline-secondary" type="button"><Link to="category/2">Tag</Link></button>
+              <button className="btn btn-sn btn-outline-secondary" type="button"><Link to="category/1">Book</Link></button>
+              <button className="btn btn-sn btn-outline-secondary" type="button"><Link to="category/3">Stickers</Link></button>
+            </form>
+          </Nav>
+          <Nav className='justify-content-end'>
+          <form className="form-inline">
+              <button className="btn btn-sn btn-outline-secondary" type="button">ingresar</button>
+              <button className="btn btn-sn btn-outline-secondary" type="button">Login</button>
               
-              <CartWidget />             
-              <li className="nav-item2">
-                <a className="nav2" href="./armados.html"><b>Login</b></a>
-              </li>
-              <li className="nav-item2">
-                <a className="nav2" href="./tablas.html"><b>Registrarse</b></a>
-              </li>
-            </ul>
-            
-          </div>
-          
-          
-      </div>
-      
-    </nav>      
+            </form>
+          </Nav>
+        </Container>
+        <CartWidget />
+        </Navbar>         
    </>
   )
 }

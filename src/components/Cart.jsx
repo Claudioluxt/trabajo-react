@@ -36,11 +36,18 @@ const Cart = () => {
 
         createOrderInFirestore()
             .then(result => {
-                Swal.fire("Su orden numero " + result.id + " ha sido creada!")
+
+            Swal.fire("Su orden numero " + result.id + " ha sido creada!")
                 test.cartList.forEach(async(item) => {
                 const itemRef = doc(db, "products", item.id);
                 await updateDoc(itemRef, {
                 stock: increment(-item.quantity)
+                });
+            })
+            test.cartList.forEach(async (item)=>{
+                const itemRef = doc(db, "products", item.id);
+                await updateDoc (itemRef, {
+                    stock:increment(-item.quantity)
                 });
             })
             test.clear()
@@ -55,10 +62,7 @@ const Cart = () => {
         <>
 
          
-         <div className="containerDetail2">      
-            
-            <button className="btn btn-outline-danger btn-sm" onClick={test.clear}>Quitar todos</button>
-
+         <div className="containerDetail2">
             <div className="cardDetail2">
 
                 <div className="flex-item">
@@ -66,11 +70,15 @@ const Cart = () => {
                 test.cartList.map (item =>
                     <>
                     <h2>{item.brand}</h2>
-                    <img class="cart2" src={item.image} alt="" />
-                    <span class="name2">  <span class="precio3">Modelo:</span> {item.nombre} <span class="precio3">/ Cantidad:</span> {item.quantity} <span class="precio3">/ Precio x Unidad =</span> {item.precio} pesos  <span class="precio3"> Subtotal: </span> {item.quantity * item.precio}</span>           
+                    <img class="rounded" src={item.image} alt="" />
+                    <span class="name2">  <span class="precio3">Modelo:</span> {item.nombre} 
+                    <span class="precio3">/ Cantidad:</span> {item.quantity} 
+                    <span class="precio3">/ Precio x Unidad =</span> {item.precio} pesos  
+                    <span class="precio3"> Subtotal: </span> {item.quantity * item.precio}</span>           
                     
-                    <buttom class="btn btn-outline-primary btn-lg" onClick={() => test.removeItem(item.id)}>Quitar producto</buttom>
-                    <Link to='/Item/:id'><button className="btn btn-outline-primary btn-sm">seguir comprando</button></Link>
+                    <button type="button" class="btn btn-secondary btn-block" onClick={() => test.removeItem(item.id)}>Quitar producto</button>
+                    <Link to='/Item/:id'>
+                        <button type="button" className="btn btn-secondary btn-block">seguir comprando</button></Link>
                     <div><hr/></div>
                     </>
                     
@@ -87,9 +95,9 @@ const Cart = () => {
                     
             <div class="flex-item"><h1>Total Compra = {test.calcTotalCompra()} pesos . </h1> </div>
 
-            <div class="flex-item"><buttom class="btn btn-secondary btn-lg" onClick={createOrder}> Realizar Compra</buttom></div>
+            <div class="flex-item"><buttom type="button" class="btn btn-secondary btn-block" onClick={createOrder}> Realizar Compra</buttom></div>
 
-            <div class="flex-item"><button class=" btn-lg" onClick={test.clear}>Quitar todos</button></div>
+            <div class="flex-item"><button type ="button" class="btn btn-secondary btn-block" onClick={test.clear}>Quitar todos</button></div>
             </div>
             
             </>
